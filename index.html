@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UDID & Railway e-Concession Pass Form</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f8f9fa;
+      font-size: 1rem;
+    }
+    .container {
+      max-width: 600px;
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #555;
+      margin-top: 10px;
+    }
+    .required:after {
+      content:" *";
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Description -->
+    <div class="mb-4">
+      <p>
+          
+        स्वतंत्रता दिवस के अवसर पर दिव्यांगजनों के लिए विशेष निशुल्क सहायता — UDID (Unique Disability ID) कार्ड आवेदन और रेलवे e-कंसेशन पास के लिए आवेदन भरने व दस्तावेज़ तैयार करने में मदद की जाएगी। यह सेवा पूरी तरह निःशुल्क है और 15 सितम्बर 2025 तक उपलब्ध रहेगी।
+      </p>
+      <p>
+          
+        On the occasion of Independence Day, special free assistance for persons with disabilities — help will be provided for filling applications and preparing documents for UDID (Unique Disability ID) Card and Railway e-concession Pass. This service is completely free and will be available until 15 September 2025.
+      </p>
+    </div>
+
+    <!-- Form -->
+    <form id="disabilityForm" action="https://script.google.com/macros/s/AKfycbzJCWvW6u2fQDta5K_AYwhUVsKe6kfHu-z2K7eKztfVjCasyeAUaeMSlbt_HnhMY80k/exec" method="POST">
+      
+      <div class="mb-3">
+        <label for="name" class="form-label required">नाम / Name</label>
+        <input type="text" id="name" name="name" class="form-control" placeholder="अपना नाम लिखें / Enter your name" aria-required="true" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="age" class="form-label required">आयु / Age</label>
+        <input type="number" id="age" name="age" class="form-control" placeholder="अपनी आयु लिखें / Enter your age" min="1" max="120" aria-required="true" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="email" class="form-label required">ईमेल / Email</label>
+        <input type="email" id="email" name="email" class="form-control" placeholder="अपना ईमेल लिखें / Enter your email" aria-required="true" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="mobile" class="form-label required">मोबाइल नंबर / Mobile Number</label>
+        <input type="tel" id="mobile" name="mobile" class="form-control" placeholder="अपना मोबाइल नंबर लिखें / Enter your mobile number" aria-required="true" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="whatsapp" class="form-label">व्हाट्सऐप नंबर (अगर अलग है) / WhatsApp Number (if different)</label>
+        <input type="tel" id="whatsapp" name="whatsapp" class="form-control" placeholder="व्हाट्सऐप नंबर लिखें / Enter your WhatsApp number">
+      </div>
+
+      <div class="mb-3">
+        <label for="gender" class="form-label required">लिंग / Gender</label>
+        <select id="gender" name="gender" class="form-select" aria-required="true" required>
+          <option value="">-- चयन करें / Select --</option>
+          <option value="Male">पुरुष / Male</option>
+          <option value="Female">महिला / Female</option>
+          <option value="Other">अन्य / Other</option>
+        </select>
+      </div>
+
+      <div class="mb-3">
+        <label for="disability" class="form-label required">विकलांगता का प्रकार / Type of Disability</label>
+        <select id="disability" name="disability" class="form-select" aria-required="true" required>
+          <option value="">-- चयन करें / Select --</option>
+          <option value="दृष्टि बाधित / Visual Impairment">दृष्टि बाधित / Visual Impairment</option>
+          <option value="श्रवण बाधित / Hearing Impairment">श्रवण बाधित / Hearing Impairment</option>
+          <option value="शारीरिक विकलांगता / Physical Disability">शारीरिक विकलांगता / Physical Disability</option>
+          <option value="मानसिक विकलांगता / Mental Disability">मानसिक विकलांगता / Mental Disability</option>
+          <option value="अन्य / Other">अन्य / Other</option>
+        </select>
+      </div>
+
+      <button type="submit" class="btn btn-primary w-100">सबमिट करें / Submit</button>
+    </form>
+
+    <!-- Thank You Message -->
+    <div id="thankYouMessage" class="alert alert-success mt-3 d-none" role="alert">
+      धन्यवाद! आपका फॉर्म सफलतापूर्वक सबमिट हो गया है।
+      हम आपसे जल्द ही संपर्क करेंगे/
+      We will be in touch shortly  
+      <br> हम कोई सरकारी संस्था नहीं हैं। हम केवल आवेदन प्रक्रिया में आपकी मदद कर रहे हैं।  
+      <br> UDID कार्ड और रेलवे e-कंसेशन पास का जारी करना संबंधित सरकारी विभाग का कार्य है।
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      संपर्क के लिए: <a href="mailto:ng44641@hotmail.com">ng44641@hotmail.com</a>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('disabilityForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      var form = e.target;
+      fetch(form.action, { method: 'POST', body: new FormData(form) })
+        .then(() => {
+          form.classList.add('d-none');
+          document.getElementById('thankYouMessage').classList.remove('d-none');
+        })
+        .catch(err => alert('Error submitting form. Please try again.'));
+    });
+  </script>
+</body>
+</html>
